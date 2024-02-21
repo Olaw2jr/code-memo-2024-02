@@ -1,4 +1,4 @@
-//setTime関数
+//setTimeout関数
 function sayHello() {
     console.log("Hello, World!");
   }
