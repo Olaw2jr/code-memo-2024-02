@@ -1,0 +1,34 @@
+<!--Elementオブジェクト-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementオブジェクト</title>
+</head>
+<body>
+    <h1>タイトル</h1>
+    <p>本文</p>
+
+    <script>
+        // h1要素を取得
+        const h1 = document.querySelector('h1');
+
+        // h1要素のテキスト内容を取得
+        const h1Text = h1.textContent;
+
+        // h1要素のテキスト内容を変更
+        h1.textContent = '新しいタイトル';
+
+        // p要素を取得
+        const p = document.querySelector('p');
+
+        // p要素に新しい要素を追加
+        p.appendChild(document.createTextNode('新しい文章'));
+
+        // p要素のスタイルを変更
+        p.style.color = 'red';
+    </script>
+    <!--styleプロパティを使って、p要素のスタイルを変更。-->
+</body>
+</html>
