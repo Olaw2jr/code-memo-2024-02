@@ -1,9 +1,18 @@
-//サイトの設定、ユーザーデータ保存するのに便利なlocalStorage
+// localStorage is convenient for saving site settings and user data
 
-const arr = ["東京", "大阪", "京都", "岡山"]
+/**
+ * An array of city names in Japan.
+ */
+const arr = ["Tokyo", "Osaka", "Kyoto", "Okayama"];
 
-//保存
-localStorage.setItem("city", JSON.stringify(arr))
+/**
+ * Stores the `arr` array in localStorage as a JSON string under the key "city".
+ */
+localStorage.setItem("city", JSON.stringify(arr));
 
-//読み取り
-JSON.parse(localStorage.getItem("city"))
+/**
+ * Retrieves the city data from localStorage and parses it back into a JavaScript array.
+ *
+ * @returns {string[]} An array of city names.
+ */
+JSON.parse(localStorage.getItem("city"));
