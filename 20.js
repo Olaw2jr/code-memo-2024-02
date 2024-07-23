@@ -1,12 +1,17 @@
-//setInterval使用の非同期処理
 let count = 0;
 
+/**
+ * This function demonstrates the use of setInterval for asynchronous tasks.
+ * It increments a counter every second and logs it to the console.
+ * After 10 iterations, it stops the interval using clearInterval.
+ */
 const interval = setInterval(() => {
   count++;
   console.log(count);
 
   if (count === 10) {
-    clearInterval(interval); // 10回カウントしたらclearInterval()で停止
+    clearInterval(interval); // Stop after 10 counts
   }
-}, 1000); // 1秒間隔で処理を実行
-//スクロールアニメーション、自動更新などの際setInterval関数が使える
+}, 1000); // Execute every 1 second
+
+// setInterval is useful for scroll animations, auto-updates, and other time-based tasks.
