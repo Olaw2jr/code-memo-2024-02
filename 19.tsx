@@ -1,19 +1,22 @@
-//Suspenseコンポーネント：コンポーネントの遅延読み込み実現。ページ全体の読み込み速度を向上させることができる。
-import { lazy, Suspense } from "react"
-//import List from "./List"
+import { lazy, Suspense } from "react";
 
-const List = lazy(() => import("./List"))
-//List コンポーネントを lazy 関数を使って遅延読み込みするように定義している
+// Dynamically import the List component for lazy loading
+const List = lazy(() => import("./List"));
+
+/**
+ * App component demonstrates the use of Suspense for lazy loading the List component.
+ *
+ * @returns {JSX.Element} The rendered App component.
+ */
 const App = () => {
-    return (
-        <>
-            <Suspense fallback={<p>ローディング</p>}
-                <List />
-            </Suspense>    
-        </>
-    )
-}
-//fallback プロパティには、List コンポーネントが読み込まれるまでの間表示される fallback コンテンツとして、<p>ローディング</p> を指定。
-export default App
+  return (
+    <>
+      <Suspense fallback={<p>Loading...</p>}>
+        <List />
+      </Suspense>
+    </>
+  );
+};
 
-//Suspenseコンポーネントのfallbackプロパティには、コンポーネントが読み込まれるまでの間表示されるfallbackコンテンツを指定できる。
+// Export the App component as the default
+export default App;
